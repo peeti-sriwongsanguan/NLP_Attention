@@ -1,10 +1,11 @@
 
 import pandas as pd
+import re
 pd.set_option('max_columns', None)
 
 
 
-def eda_nltk():
+def eda_nltk(dataframe):
     
     if dataframe.split('.')[-1] == 'json' or dataframe.split('.')[-1] == 'csv' or dataframe.split('.')[-1] == 'xlsx':
 
@@ -42,4 +43,13 @@ def eda_nltk():
             print('Check your file name')
     
         return df
+    
+    
+def remove_tags(string):
+    removelist = ""
+    result = re.sub('','',string)          #remove HTML tags
+    result = re.sub('https://.*','',result)   #remove URLs
+    result = re.sub(r'\W+', ' ',result)    #remove non-alphanumeric characters 
+    result = result.lower()
+    return result
     

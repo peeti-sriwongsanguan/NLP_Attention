@@ -6,7 +6,6 @@ from tensorflow import keras
 from tensorflow.keras.layers import Embedding, Input, Dense, Lambda
 from tensorflow.keras.models import Model
 import tensorflow.keras.backend as K
-import tensorflow_datasets as tfds
 import tensorflow_text as tf_text
 
 import sklearn as sk

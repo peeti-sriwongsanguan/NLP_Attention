@@ -6,3 +6,7 @@ nltk>=3.5,<4.0
 tensorflow>=2.4.0,<3.0.0
 scikit-learn>=0.24.0,<2.0.0
 keras>=2.4.0,<3.0.0
+
+# TODO
+# python -m venv nlp_attention_env
+# source nlp_attention_env/bin/activate  # On Windows, use nlp_attention_env\Scripts\activate
